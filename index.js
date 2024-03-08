@@ -1,8 +1,10 @@
 const express = require("express");
 
 const connect = require("./database_conn/conn");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const port = 3001;
 
 const helloWorldRouter = require("./routes/helloWorld"); // Import the routes

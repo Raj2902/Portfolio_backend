@@ -12,7 +12,7 @@ const sendMailFunction = async (req, res) => {
 
   const mailOptions = {
     from: '"Raj Agarwal" <rajagarwalgood@gmail.com>',
-    to: req.body.email,
+    to: "rajagarwalgood@gmail.com",
     subject: "A question has been asked from your portfolio",
     html: `<div style="font-family: sans-serif">
         <div style="text-align: center">
@@ -34,7 +34,7 @@ const sendMailFunction = async (req, res) => {
           >
             <b style="font-size: x-large">Contact Form</b>
             <p>
-              Name : ${req.body.name}<br />Email : ${req.body.email}<br />Subject :
+              Name : ${req.body.name}<br />Email From : ${req.body.email}<br />Subject :
               ${req.body.subject}<br />Message : ${req.body.message}
             </p>
             <p>Thanks,<br />Raj Agarwal</p>
